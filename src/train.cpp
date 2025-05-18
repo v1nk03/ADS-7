@@ -51,6 +51,9 @@ int Train::getLength() {
             }
             length = traversalSteps;
             foundUnlit = true;
+        } else if (currentTrainCar == first && currentTrainCar->light) {
+          // Add this condition to handle the fully lit loop
+          break;
         }
     }
 
