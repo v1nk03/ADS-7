@@ -1,6 +1,8 @@
 // Copyright 2021 NNTU-CS
 #include "train.h"
 
+Train::Train() : first(nullptr), countOp(0) {}
+
 void Train::addCar(bool light) {
     Car* newTrainCar = new Car{light, nullptr, nullptr};
     if (!first) {
